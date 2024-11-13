@@ -1,27 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Christmas Prom - Ticket</title>
-        <link rel="icon" href="https://tkhc.edu.hk/wp-content/uploads/2021/02/Untitled-2.png">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="ticket">
-        <h1>Christmas prom</h1>
-        <h3>by Student-led Committee 2024</h3>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Responsive Registration Form | CodingLab </title>
+  <link rel="stylesheet" href="style-ticket.css">
+</head>
+<body>
+    <div class="infomation">
+        <h1>Details</h1>
+        <p>
+            Date: 14/12/2024<br>
+            Time: 15:30 - 18:00<br>
+            Venue: School Hall @ TKHC<br>
+            Fee: $110<br>
+            Limited ticket, first registered first served <br><br>
+            <b>please come to the cover playground at <time>8:00 - 8:25</time> on <data>19/11 - 20/11</data> to pay after registering here.</b>
+        </p>
+    </div>
 
-        <form action="iName">
-            <label for="iName">Name</label>
-            <input type="text" placeholder="name" name="iName" id="iName">
-            <br>
-            <label for="iClass">Class</label>
-            <input type="text" placeholder="class" name="iClass" id="iClass">
-            <br>
-            <label for="iEmail">Email</label>
-            <input type="text" placeholder="email" name="iEmail" id="iEmail">
-            <br>
-
+    <div class="container">
+        <!-- Title section -->
+        <div class="title">Registration</div>
+        <div class="content">
+        <!-- Registration form -->
+        <form action="#">
+            <div class="user-details">
+            <!-- Input for Full Name -->
+            <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" placeholder="Enter your first name" required>
+            </div>
+            <!-- Input for Last Name -->
+            <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" placeholder="Enter your last name" required>
+            </div>
+            <!-- Input for class -->
+            <div class="input-box">
+                <span class="details">Class</span>
+                <input type="text" placeholder="Enter your class" required>
+            </div>
+            <!-- Input for Email -->
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your email" required>
+            </div>
+            </div>
+            <!-- Submit button -->
+            <div class="button">
+            <input type="submit" value="Register">
+            </div>
         </form>
-    </body>
-
-
-</html>
+        </div>
+  </div>
+</body>
+</html><div class="open_grepper_editor" title="Edit & Save To Grepper"></div>
