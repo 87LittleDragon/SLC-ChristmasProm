@@ -2,8 +2,8 @@
 
 body{
     background-image: url(background.png);
-    min-height: 100svh;
-    max-width: 100svw;
+    min-height: 100%;
+    max-width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@ body{
     font-family: 'Poppins', sans-serif;
     color: goldenrod;
     margin: 0;
-    padding: 0;
+    padding: 3px;
     overflow-y: scroll;
     overflow-x: clip;
 }
@@ -21,7 +21,8 @@ body{
 section{
     display: grid;
     place-items: center;
-    min-height: 100svh;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .header{
@@ -97,12 +98,20 @@ section{
 
 @media (orientation: portrait){
     .header{
-        font-size: 80px;
+        font-size: 70px;
     }
     .infomation{
         font-size: 30px;
+        /* place-items: center; */
+        
     }
     .buy{
         font-size: 90px;;
+    }
+    #title{
+        font-size: 90px;
+    }
+    a{
+        text-align: center;
     }
 }
