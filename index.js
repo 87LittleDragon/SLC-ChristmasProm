@@ -2,6 +2,7 @@ const express = require("express");
 const { google } = require("googleapis");
 const { each } = require("jquery");
 const path = require('path');
+const fs = require('fs')
 
 let ticketNumber = 0;
 let reapeated = false
@@ -84,4 +85,12 @@ app.get('/successq',(req,res)=>{
   res.send(reapeated)
 })
 
-app.listen(443, (req, res) => console.log("running on 443"));
+
+const https = require('https')
+
+const sslServer = https.createServer({
+  key: fs.readFileSync(__dirname + "domain.key"),
+  cert: fs.readFileSync(__dirname + "chained.pem")
+},app)
+
+sslServer.listen(443, () => console.log('Secure server on port 443'))
