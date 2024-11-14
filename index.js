@@ -84,4 +84,4 @@ app.get('/successq',(req,res)=>{
   res.send(reapeated)
 })
 
-app.listen(1337, (req, res) => console.log("running on 1337"));
+app.listen(80, (req, res) => console.log("running on 80"));

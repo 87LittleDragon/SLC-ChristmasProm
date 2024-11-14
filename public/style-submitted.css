@@ -48,6 +48,9 @@ body{
 .hide{
     display:none;
 }
+.small{
+    font-size: 20px;
+}
 @media (orientation: portrait){
     .submit{
         font-size: 30px;
