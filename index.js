@@ -93,4 +93,5 @@ const sslServer = https.createServer({
   cert: fs.readFileSync(__dirname + "/keys/chained.pem")
 },app)
 
-sslServer.listen(443, () => console.log('Secure server on port 443')
+sslServer.listen(443, () => console.log('Secure server on port 443'))
+
