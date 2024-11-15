@@ -89,8 +89,8 @@ app.get('/successq',(req,res)=>{
 const https = require('https')
 
 const sslServer = https.createServer({
-  key: fs.readFileSync(__dirname + "domain.key"),
-  cert: fs.readFileSync(__dirname + "chained.pem")
+  key: fs.readFileSync(__dirname + "/keys/domain.key"),
+  cert: fs.readFileSync(__dirname + "/keys/chained.pem")
 },app)
 
-sslServer.listen(443, () => console.log('Secure server on port 443'))
+sslServer.listen(443, () => console.log('Secure server on port 443')
