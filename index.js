@@ -51,9 +51,9 @@ app.post("/ticket.html", async (req, res) => {
     reapeated = false
     if (item[3] === email){
       reapeated = true
-      console.log(email)
-      console.log(item[3])
-      console.log('repeat')
+      // console.log(email)
+      // console.log(item[3])
+      // console.log('repeat')
     }
   })
   let values = [firstName, lastName, Class, email, 'FALSE']
@@ -71,10 +71,10 @@ app.post("/ticket.html", async (req, res) => {
     });
 
     ticketNumber = getRows.data.values.length
-    console.log(values)
-    console.log(ticketNumber)
+    // console.log(values)
+    // console.log(ticketNumber)
   }
-  console.log(reapeated)
+  // console.log(reapeated)
   res.sendFile(__dirname+"/public/submitted.html");
 });
 
