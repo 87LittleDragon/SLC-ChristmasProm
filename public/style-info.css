@@ -1,5 +1,6 @@
 *{ -webkit-appearence: none;}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 body{
     background-image: url(background.png);
     min-height: 100%;
@@ -9,7 +10,10 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
+    /* background: url(background.png) no-repeat center center fixed; */
     background-size: cover;
+    -webkit-background-size: cover;
+    -prefix-background-size: cover;
     font-family: 'Poppins', sans-serif;
     color: goldenrod;
     margin: 0;
@@ -17,7 +21,9 @@ body{
     overflow-y: scroll;
     overflow-x: clip;
 }
-
+.apple{
+    display: none;
+}
 section{
     display: grid;
     place-items: center;
@@ -38,15 +44,30 @@ section{
 }
 .infomationList{
     font-size: 50px;
+    display:grid;
 }
 .infomation{
+    place-items: center;
+    justify-content: center;
     width: 100%;
     display: flex;
+    margin-right: 7%;
 }
 .infomation .hidden{
     width: 100%;
     flex:1 ;
 }
+.left{
+    text-align: right;
+    justify-content: right;
+    margin-right:10%;
+ }
+.right{
+    text-align: left;
+    justify-content: left;
+    margin-left:10%;
+}
+
 .buy{
     font-size: 100px;
     color: goldenrod;
@@ -115,3 +136,13 @@ section{
         text-align: center;
     }
 }
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+    .content{
+        display: none;
+    }
+    .apple{
+        display: contents;
+    }
+  }
