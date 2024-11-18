@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname +'/views/index.html');
+  res.sendFile(__dirname +'/public/info.html');
   // res.sendFile("info.html")
   // res.sendFile("ticket.html")
 });
