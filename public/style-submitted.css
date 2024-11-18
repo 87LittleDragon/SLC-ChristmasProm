@@ -1,6 +1,5 @@
 *{ -webkit-appearence: none;}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap');
 body{
     background-image: url(background.png);
     min-height: 100vh;
@@ -11,7 +10,10 @@ body{
     background-position: bottom;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
     color: goldenrod;
     margin: 0;
     padding: 0;
