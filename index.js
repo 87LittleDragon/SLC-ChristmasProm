@@ -46,15 +46,15 @@ app.post("/ticket.html", async (req, res) => {
     spreadsheetId,
     range: "Sheet1!A:E",
   });
-  console.log(getRows.data.values);
+  // console.log(getRows.data.values);
+  reapeated = false
   getRows.data.values.forEach((item) => {
-    reapeated = false
     if (item[3] === email){
       reapeated = true
       // console.log(email)
       // console.log('repeat')
       }
-    console.log(item[3])
+    // console.log(item[3])
   })
   let values = [firstName, lastName, Class, email, 'FALSE']
   
@@ -94,4 +94,4 @@ const sslServer = https.createServer({
 },app)
 
 sslServer.listen(443, () => console.log('Secure server on port 443'))
-app.listen(80,() => console.log('server on port 4000'))
+app.listen(80,() => console.log('server on port 80'))
