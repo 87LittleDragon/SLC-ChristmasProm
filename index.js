@@ -26,7 +26,7 @@ function iOS() {
 }
 
 app.get("/", (req, res) => {
-  if(iOS){
+  if(iOS()){
     res.sendFile(__dirname +'/public/ticket.html');
   }else{
     res.sendFile(__dirname +'/public/info.html');
