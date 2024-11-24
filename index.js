@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   if (typeof window !== "undefined") {
     const deviceType = navigator.userAgent;
     }else{
-      const deviceType = null;
+      const deviceType = 0;
     }
   if(/iPad|iPhone|iPod/.test(deviceType)){
     res.sendFile(__dirname +'/public/ticket.html');
