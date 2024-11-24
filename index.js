@@ -13,15 +13,12 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  if (typeof window !== "undefined") {
     const deviceType = navigator.userAgent;
     if(/iPad|iPhone|iPod/.test(deviceType)){
       res.sendFile(__dirname +'/public/ticket.html');
     }else{
       res.sendFile(__dirname +'/public/info.html');
     }
-    }
-  
   // res.sendFile("info.html")
   // res.sendFile("ticket.html")
 });
