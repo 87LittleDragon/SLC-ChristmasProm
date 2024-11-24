@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 function iOS() {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent)
+  return /iPad|iPhone|iPod/.test(global.navigator.userAgent)
 }
 
 app.get("/", (req, res) => {
