@@ -12,8 +12,25 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)
+  // iPad on iOS 13 detection
+  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
+
 app.get("/", (req, res) => {
-  res.sendFile(__dirname +'/public/info.html');
+  if(iOS){
+    res.sendFile(__dirname +'/public/ticket.html');
+  }else{
+    res.sendFile(__dirname +'/public/info.html');
+  }
   // res.sendFile("info.html")
   // res.sendFile("ticket.html")
 });
