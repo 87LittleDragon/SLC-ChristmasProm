@@ -145,4 +145,7 @@ section{
     .apple{
         display: contents;
     }
+    #buyTicket{
+        text-decoration: underline;
+    }
   }

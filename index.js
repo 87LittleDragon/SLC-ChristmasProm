@@ -13,14 +13,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    const deviceType = navigator.userAgent;
-    if(/iPad|iPhone|iPod/.test(deviceType)){
-      res.sendFile(__dirname +'/public/ticket.html');
-    }else{
-      res.sendFile(__dirname +'/public/info.html');
-    }
-  // res.sendFile("info.html")
-  // res.sendFile("ticket.html")
+    res.sendFile(__dirname +'/public/info.html');
 });
 
 app.post("/ticket.html", async (req, res) => {
@@ -91,12 +84,12 @@ app.get('/successq',(req,res)=>{
 })
 
 
-const https = require('https')
+// const https = require('https')
 
-const sslServer = https.createServer({
-  key: fs.readFileSync(__dirname + "/keys/domain.key"),
-  cert: fs.readFileSync(__dirname + "/keys/chained.pem")
-},app)
+// const sslServer = https.createServer({
+//   key: fs.readFileSync(__dirname + "/keys/domain.key"),
+//   cert: fs.readFileSync(__dirname + "/keys/chained.pem")
+// },app)
 
-sslServer.listen(443, () => console.log('Secure server on port 443'))
+// sslServer.listen(443, () => console.log('Secure server on port 443'))
 app.listen(80,() => console.log('server on port 80'))
