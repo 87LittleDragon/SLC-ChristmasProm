@@ -13,16 +13,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 function iOS() {
-  return [
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod'
-  ].includes(global.navigator.platform)
-  // iPad on iOS 13 detection
-  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  return /iPad|iPhone|iPod/.test(navigator.userAgent)
 }
 
 app.get("/", (req, res) => {
