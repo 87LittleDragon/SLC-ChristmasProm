@@ -12,12 +12,8 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-function iOS() {
-  return /iPad|iPhone|iPod/.test(global.navigator.userAgent)
-}
-
 app.get("/", (req, res) => {
-  if(iOS()){
+  if(/iPad|iPhone|iPod/.test(navigator.userAgent)){
     res.sendFile(__dirname +'/public/ticket.html');
   }else{
     res.sendFile(__dirname +'/public/info.html');
