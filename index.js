@@ -61,7 +61,7 @@ app.post("/ticket.html", async (req, res) => {
     await googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId,
-      range: "{Sheet1!A:B; Sheet2!A:B}",
+      range: "{Sheet1!A:B}",
       valueInputOption: "USER_ENTERED",
       resource: {
         values: [values],
