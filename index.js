@@ -67,6 +67,15 @@ app.post("/ticket.html", async (req, res) => {
         values: [values],
       },
     });
+    await googleSheets.spreadsheets.values.append({
+      auth,
+      spreadsheetId,
+      range: "Sheet2!A:E",
+      valueInputOption: "USER_ENTERED",
+      resource: {
+        values: [values],
+      },
+    });
 
     ticketNumber = getRows.data.values.length
     // console.log(values)
@@ -86,10 +95,10 @@ app.get('/successq',(req,res)=>{
 
 const https = require('https')
 
-const sslServer = https.createServer({
-  key: fs.readFileSync(__dirname + "/keys/domain.key"),
-  cert: fs.readFileSync(__dirname + "/keys/chained.pem")
-},app)
+// const sslServer = https.createServer({
+//   key: fs.readFileSync(__dirname + "/keys/domain.key"),
+//   cert: fs.readFileSync(__dirname + "/keys/chained.pem")
+// },app)
 
-sslServer.listen(443, () => console.log('Secure server on port 443'))
+// sslServer.listen(443, () => console.log('Secure server on port 443'))
 app.listen(80,() => console.log('server on port 80'))
