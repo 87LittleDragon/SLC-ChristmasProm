@@ -1,5 +1,5 @@
 const successRegister = document.getElementById('successRegister');
-const ticketNumber = document.getElementById('ticketNumber');
+// const ticketNumber = document.getElementById('ticketNumber');
 const content = document.getElementById('content')
 let success = false
 console.log("test from submitted.js");
@@ -14,9 +14,9 @@ async function getRepeated(){
     let repeated = await fetch('/successq').then((val) => val.text());
     console.log(repeated)
     successRegister.textContent = (repeated === 'false') ? "Successfully registered" : "failed to register - repeated email address"; 
-    if (repeated === 'true'){
-        content.classList.add('hide')
-    }
+    // if (repeated === 'true'){
+    //     content.classList.add('hide')
+    // }
     
     
     
