@@ -47,7 +47,7 @@ app.post("/ticket.html", async (req, res) => {
   // console.log(getRows.data.values);
   reapeated = false
   getRows.data.values.forEach((item) => {
-    if (item[3] === email){
+    if (item[4] === email){
       reapeated = true
       // console.log(email)
       // console.log('repeat')
