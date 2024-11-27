@@ -1,6 +1,6 @@
 const successRegister = document.getElementById('successRegister');
 // const ticketNumber = document.getElementById('ticketNumber');
-const submit = document.getElementsByClassName('submit')
+const submit = document.getElementById('submit')
 let success = false
 console.log("test from submitted.js");
 
