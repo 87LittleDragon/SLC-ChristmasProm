@@ -55,7 +55,7 @@ app.post("/ticket.html", async (req, res) => {
     // console.log(item[3])
   })
   var line=getRows.data.values.length+1
-  let values = ['', firstName, lastName, Class, email,'=if(A'+line+'="","FALSE","TRUE")']
+  let values = ['', firstName, lastName, Class, email,'=if(A'+line+'="",false,true)']
   // console.log(values)
   if(!reapeated){
     // Write row(s) to spreadsheet
