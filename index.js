@@ -15,7 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.sendFile(__dirname +'/public/info.html');
 });
-
+app.get("/vote", (req, res) => {
+  res.sendFile(__dirname +'/public/vote.html');
+});
 app.post("/ticket.html", async (req, res) => {
   const { firstName, lastName, Class, email } = req.body;
 
